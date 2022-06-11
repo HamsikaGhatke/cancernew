@@ -4,9 +4,9 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('breast_cancer_detector.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
-@app.route('/',methods=['GET'])
+@app.route('/')
 def home():
     return render_template('index.html')
 
